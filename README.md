@@ -108,4 +108,4 @@ This platform was designed and directed by me — covering requirements, system 
 
 ---
 
-*PhD project · University of Manchester · Electrical & Electronic Engineering · 2024–2026*
+*PhD project · University of Manchester · Electrical & Electronic Engineering · 2022–2026*
