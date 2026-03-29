@@ -32,9 +32,9 @@ Interactive multi-file Plotly overlay with switchable wavelength (nm) / energy (
 
 ### Tab 3 · 峰拟合 · Peak Fitting
 
-在能量空间对单条光谱执行多峰高斯拟合（含 λ² 雅可比校正），自动初始化拟合参数，输出各分量的峰位（eV/nm）、半高宽（FWHM）、面积与 R²，支持导出 CSV/TXT。
+在能量空间对单条光谱执行多峰高斯拟合（含 λ² 雅可比校正），自动初始化拟合参数，输出各分量的峰位（eV/nm）、半高宽（FWHM）、面积与 R²，支持导出 xlsx。
 
-Performs multi-peak Gaussian fitting on a single spectrum in energy space with Jacobian correction (I·λ²). Auto-initialises fit parameters and outputs peak position (eV/nm), FWHM, area, and R² for each component, with CSV/TXT export.
+Performs multi-peak Gaussian fitting on a single spectrum in energy space with Jacobian correction (I·λ²). Auto-initialises fit parameters and outputs peak position (eV/nm), FWHM, area, and R² for each component, with xlsx export.
 
 ### Tab 4 · 功率系列分析 · Power Series Analysis
 
@@ -50,9 +50,9 @@ Loads rate-equation fitting results from multiple sample conditions and plots cr
 
 ### Tab 6 · CIE 色坐标图 · CIE Diagram
 
-标准 CIE 1931 色度图，支持全色域填色背景，可手动输入多个样品的 x,y 色坐标并叠加显示，用于对比不同条件下 GaN 发光的色坐标偏移。
+标准 CIE 1931 色度图，支持全色域填色背景，自动计算多个样品的 x,y 色坐标并叠加显示，用于对比不同条件下 GaN 发光的色坐标偏移。
 
-Standard CIE 1931 chromaticity diagram with optional full-gamut colour-fill background. Accepts manual x,y coordinate input for multiple samples to visualise emission chromaticity shifts across conditions.
+Standard CIE 1931 chromaticity diagram with optional full-gamut colour-fill background. Automatically calculate x,y coordinates for multiple samples to visualise emission chromaticity shifts across conditions.
 
 ### Tab 7 · Mapping 热图 · Mapping Heatmap
 
