@@ -4,6 +4,8 @@
 
 An AI-augmented analysis workspace for semiconductor photoluminescence research. This tool consolidates previously fragmented experimental processing scripts into a unified Streamlit interface, covering the full chain from raw file parsing to AI-assisted scientific writing. The ~6,200-line codebase was delivered through structured LLM collaboration based on my own requirements and architecture design, without writing any code directly.
 
+▶ **[YouTube 演示视频](https://youtu.be/JHJoTHOIp70)** · **[Bilibili 演示视频](https://www.bilibili.com/video/BV1ZWXSBeE9P/)**
+
 ---
 
 ## 研究背景 · Research Context
@@ -30,7 +32,7 @@ Interactive multi-file Plotly overlay with switchable wavelength (nm) / energy (
 
 ### Tab 3 · 峰拟合 · Peak Fitting
 
-在能量空间对单条光谱执行多峰高斯拟合（含 λ² 雅可比校正），自动初始化拟合参数，输出各分量的峰位（eV/nm）、半高宽（FWHM）、面积与 R²，支持导出 xlsx。
+在能量空间对单条光谱执行多峰高斯拟合（含 λ² 雅可比校正），自动初始化拟合参数，输出各分量的峰位（eV/nm）、半高宽（FWHM）、面积与 R²，支持导出 CSV/TXT。
 
 Performs multi-peak Gaussian fitting on a single spectrum in energy space with Jacobian correction (I·λ²). Auto-initialises fit parameters and outputs peak position (eV/nm), FWHM, area, and R² for each component, with CSV/TXT export.
 
@@ -108,4 +110,4 @@ This platform was designed and directed by me — covering requirements, system 
 
 ---
 
-*PhD project · University of Manchester · Electrical & Electronic Engineering · 2022–2026*
+*PhD project · University of Manchester · Electrical & Electronic Engineering · 2024–2026*
