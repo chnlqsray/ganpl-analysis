@@ -30,7 +30,7 @@ Interactive multi-file Plotly overlay with switchable wavelength (nm) / energy (
 
 ### Tab 3 · 峰拟合 · Peak Fitting
 
-在能量空间对单条光谱执行多峰高斯拟合（含 λ² 雅可比校正），自动初始化拟合参数，输出各分量的峰位（eV/nm）、半高宽（FWHM）、面积与 R²，支持导出 CSV/TXT。
+在能量空间对单条光谱执行多峰高斯拟合（含 λ² 雅可比校正），自动初始化拟合参数，输出各分量的峰位（eV/nm）、半高宽（FWHM）、面积与 R²，支持导出 xlsx。
 
 Performs multi-peak Gaussian fitting on a single spectrum in energy space with Jacobian correction (I·λ²). Auto-initialises fit parameters and outputs peak position (eV/nm), FWHM, area, and R² for each component, with CSV/TXT export.
 
