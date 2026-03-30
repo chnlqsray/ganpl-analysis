@@ -6,3 +6,4 @@ pandas
 pillow
 langchain-openai
 openpyxl
+kaleido
