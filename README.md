@@ -93,7 +93,7 @@ pip install -r requirements.txt
 # GROQ_API_KEY = "your_groq_api_key_here"
 
 # 3. 运行
-streamlit run app.py
+streamlit run GaN_PL.py
 ```
 
 **注意 · Note**：实验数据文件（SPF2 原始光谱、校正曲线 txt 等）涉及未发表研究成果，不随代码一并发布。运行时需自行准备兼容格式的光谱数据。
