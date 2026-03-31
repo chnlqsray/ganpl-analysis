@@ -870,7 +870,7 @@ with tab3:
         fig_prev.add_trace(go.Scatter(
             x=ev_fit, y=int_lam2,
             mode="lines", name="Spectrum (λ²-corrected)",
-            line=dict(color="#1f77b4", width=2),
+                line=dict(color="#1f77b4", width=line_width),
             hovertemplate="E = %{x:.4f} eV<br>I·λ² = %{y:.4g}<extra></extra>",
         ))
 
@@ -1024,7 +1024,7 @@ with tab3:
             fig_fit.add_trace(go.Scatter(
                 x=ev_plot, y=il2_plot,
                 mode="lines", name="Data",
-                line=dict(color="#1f77b4", width=2),
+                line=dict(color="#1f77b4", width=line_width),
                 hovertemplate="E=%{x:.4f} eV  I·λ²=%{y:.4g}<extra></extra>",
             ))
 
@@ -1033,7 +1033,7 @@ with tab3:
             fig_fit.add_trace(go.Scatter(
                 x=ev_plot, y=y_total,
                 mode="lines", name="Total fit",
-                line=dict(color="black", width=2, dash="dash"),
+                line=dict(color="black", width=line_width, dash="dash"),
                 hovertemplate="Fit: %{y:.4g}<extra></extra>",
             ))
 
@@ -1056,7 +1056,7 @@ with tab3:
                 fig_fit.add_trace(go.Scatter(
                     x=ev_plot, y=comp,
                     mode="lines", name=label,
-                    line=dict(color=color, width=1.8),
+                    line=dict(color=color, width=line_width),
                     fill="tozeroy",
                     fillcolor=fill_color,
                     hovertemplate=f"{label}: %{{y:.4g}}<extra></extra>",
@@ -1133,7 +1133,7 @@ with tab3:
                 fig_res = go.Figure()
                 fig_res.add_trace(go.Scatter(
                     x=ev_plot, y=residuals_all, mode="lines",
-                    line=dict(color="#7f7f7f", width=1.5),
+                    line=dict(color="#7f7f7f", width=line_width),
                     hovertemplate="E=%{x:.4f} eV  Δ=%{y:.4g}<extra></extra>",
                     name="Residual",
                 ))
@@ -1538,7 +1538,7 @@ with tab4:
                     fig_ll.add_trace(go.Scatter(
                         x=x_fit, y=y_fit, mode="lines",
                         name=f"{bn} Fit (slope={slope:.2f}, R²={r2_ll:.3f})",
-                        line=dict(color=color, width=2),
+                        line=dict(color=color, width=line_width),
                         hovertemplate=f"Fit: %{{y:.3f}}<extra></extra>",
                     ))
 
@@ -2264,7 +2264,7 @@ with tab4:
                             x=P_fit_fine, y=I_ch1_fine, mode="lines",
                             name=f"{ch1_lbl} Fit",
                             legendgroup="b_ch1",
-                            line=dict(color=CH1_MDL, dash="dash", width=1.8),
+                            line=dict(color=CH1_MDL, dash="dash", width=line_width),
                             hovertemplate=f"{ch1_lbl} Fit: %{{y:.3e}}<extra></extra>",
                         ), row=1, col=2)
                         # CH2 experimental
@@ -2288,7 +2288,7 @@ with tab4:
                             x=P_fit_fine, y=I_ch2_fine, mode="lines",
                             name="YB Fit",
                             legendgroup="b_ch2",
-                            line=dict(color=CH2_MDL, dash="dash", width=1.8),
+                            line=dict(color=CH2_MDL, dash="dash", width=line_width),
                             hovertemplate="YB Fit: %{y:.3e}<extra></extra>",
                         ), row=1, col=2)
                         # R² annotation inside panel (b)
@@ -2321,7 +2321,7 @@ with tab4:
                             name=f"Residual {ch1_lbl}",
                             legendgroup="c_ch1",
                             legendgrouptitle_text="(c) Residuals",
-                            line=dict(color=CH1_RES, width=2),
+                            line=dict(color=CH1_RES, width=line_width),
                             marker=dict(color=CH1_RES, size=7),
                             hovertemplate=f"Residual {ch1_lbl}: %{{y:.3e}}<extra></extra>",
                         ), row=2, col=1)
@@ -2329,7 +2329,7 @@ with tab4:
                             x=P_abs_s3, y=abs_res_ch2, mode="lines+markers",
                             name="Residual YB",
                             legendgroup="c_ch2",
-                            line=dict(color=CH2_RES, width=2),
+                            line=dict(color=CH2_RES, width=line_width),
                             marker=dict(color=CH2_RES, size=7),
                             hovertemplate="Residual YB: %{{y:.3e}}<extra></extra>",
                         ), row=2, col=1)
@@ -2340,7 +2340,7 @@ with tab4:
                             y=[3*sigma_ch1, 3*sigma_ch1, None, -3*sigma_ch1, -3*sigma_ch1],
                             mode="lines", name=f"±3σ {ch1_lbl}",
                             legendgroup="c_ch1",
-                            line=dict(color=CH1_RES, dash="dot", width=1.2),
+                            line=dict(color=CH1_RES, dash="dot", width=max(line_width*0.6, 1.0)),
                             showlegend=True,
                             hovertemplate=f"±3σ {ch1_lbl}: ±{3*sigma_ch1:.3e}<extra></extra>",
                         ), row=2, col=1)
@@ -2349,7 +2349,7 @@ with tab4:
                             y=[3*sigma_ch2, 3*sigma_ch2, None, -3*sigma_ch2, -3*sigma_ch2],
                             mode="lines", name="±3σ YB",
                             legendgroup="c_ch2",
-                            line=dict(color=CH2_RES, dash="dot", width=1.2),
+                            line=dict(color=CH2_RES, dash="dot", width=max(line_width*0.6, 1.0)),
                             showlegend=True,
                             hovertemplate=f"±3σ YB: ±{3*sigma_ch2:.3e}<extra></extra>",
                         ), row=2, col=1)
@@ -2367,7 +2367,7 @@ with tab4:
                             name=f"{ch1_lbl} Rel Error (%)",
                             legendgroup="d_ch1",
                             legendgrouptitle_text="(d) Rel. error",
-                            line=dict(color=CH1_REL, width=2),
+                            line=dict(color=CH1_REL, width=line_width),
                             marker=dict(color=CH1_REL, size=7),
                             hovertemplate=f"{ch1_lbl} Rel Error: %{{y:.2f}}%<extra></extra>",
                         ), row=2, col=2)
@@ -2375,7 +2375,7 @@ with tab4:
                             x=P_abs_s3, y=rel_res_ch2, mode="lines+markers",
                             name="YB Rel Error (%)",
                             legendgroup="d_ch2",
-                            line=dict(color=CH2_REL, width=2),
+                            line=dict(color=CH2_REL, width=line_width),
                             marker=dict(color=CH2_REL, size=7),
                             hovertemplate="YB Rel Error: %{y:.2f}%<extra></extra>",
                         ), row=2, col=2)
@@ -2741,7 +2741,7 @@ with tab5:
             fig_tau.add_trace(go.Scatter(
                 x=x_pos, y=tau1_arr, name="τ_1 (ns)",
                 mode="lines+markers",
-                line=dict(color=_BLUE, width=2),
+                line=dict(color=_BLUE, width=line_width),
                 marker=dict(color=_BLUE, size=8),
                 yaxis="y", connectgaps=False,
                 hovertemplate="τ_1: %{y:.2f} ns<extra></extra>",
@@ -2749,7 +2749,7 @@ with tab5:
             fig_tau.add_trace(go.Scatter(
                 x=x_pos, y=tau2_arr, name="τ_2 (µs)",
                 mode="lines+markers",
-                line=dict(color=_GOLD, width=2),
+                line=dict(color=_GOLD, width=line_width),
                 marker=dict(color=_GOLD, size=8),
                 yaxis="y2", connectgaps=False,
                 hovertemplate="τ_2: %{y:.2f} µs<extra></extra>",
@@ -2780,7 +2780,7 @@ with tab5:
             fig_eta.add_trace(go.Scatter(
                 x=x_pos, y=ebb_arr, name="η_BB (%)",
                 mode="lines+markers",
-                line=dict(color=_BLUE, width=2),
+                line=dict(color=_BLUE, width=line_width),
                 marker=dict(color=_BLUE, size=8),
                 yaxis="y", connectgaps=False,
                 hovertemplate="η_BB: %{y:.2f}%<extra></extra>",
@@ -2788,7 +2788,7 @@ with tab5:
             fig_eta.add_trace(go.Scatter(
                 x=x_pos, y=eyb_arr, name="η_YB (%)",
                 mode="lines+markers",
-                line=dict(color=_GOLD, width=2),
+                line=dict(color=_GOLD, width=line_width),
                 marker=dict(color=_GOLD, size=8),
                 yaxis="y2", connectgaps=False,
                 hovertemplate="η_YB: %{y:.2f}%<extra></extra>",
