@@ -112,7 +112,7 @@ def load_correction_interp(filepath: str):
     try:
         d = np.loadtxt(filepath)
         return interp1d(d[:, 0], d[:, 1], kind="linear",
-                        bounds_error=False, fill_value=1.0)
+                        bounds_error=False, fill_value=(float(d[:, 1][0]), float(d[:, 1][-1])), assume_sorted=False,)
     except Exception:
         return lambda wl: np.ones_like(wl, dtype=float)
 
