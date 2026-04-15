@@ -4,7 +4,7 @@
 
 An AI-augmented analysis workspace for semiconductor photoluminescence research. This tool consolidates previously fragmented experimental processing scripts into a unified Streamlit interface, covering the full chain from raw file parsing to AI-assisted scientific writing. The ~6,200-line codebase was delivered through structured LLM collaboration based on my own requirements and architecture design, without writing any code directly.
 
-▶ **[YouTube 演示视频](https://youtu.be/JHJoTHOIp70)** · **[Bilibili 演示视频](https://www.bilibili.com/video/BV1ZWXSBeE9P/)**
+▶ **[YouTube 演示视频](https://youtu.be/PGWuGbAADsk)** · **[Bilibili 演示视频](https://www.bilibili.com/video/BV1ZWXSBeE9P/)**
 
 ---
 
